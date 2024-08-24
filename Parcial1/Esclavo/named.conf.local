@@ -1,0 +1,13 @@
+/*Zona hacia adelante*/
+zone "camvas.com" {
+type slave;
+masters { 192.168.50.3; };
+file "/etc/bind/db.camvas.com";
+};
+
+/*Zona inversa*/
+zone "50.168.192.in-addr.arpa" {
+type slave;
+masters { 192.168.50.3; };
+file "/etc/bind/db.192";
+};
